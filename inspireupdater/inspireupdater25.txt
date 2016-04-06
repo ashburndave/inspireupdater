@@ -1,0 +1,171 @@
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ tree inspireupdater/
+inspireupdater/
+├── build
+│   └── classes
+├── src
+└── WebContent
+    ├── META-INF
+    │   └── MANIFEST.MF
+    └── WEB-INF
+        ├── lib
+        └── web.xml
+
+7 directories, 2 files
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ cat inspireupdater/WebContent/WEB-INF/web.xml 
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>inspireupdater</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ tree inspireupdater/
+inspireupdater/
+├── build
+│   └── classes
+│       └── com
+│           └── acme
+│               ├── DownloadServlet.class
+│               └── InfoServlet.class
+├── src
+│   └── com
+│       └── acme
+│           ├── DownloadServlet.java
+│           └── InfoServlet.java
+└── WebContent
+    ├── META-INF
+    │   └── MANIFEST.MF
+    └── WEB-INF
+        ├── lib
+        └── web.xml
+
+11 directories, 6 files
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ cat inspireupdater/WebContent/WEB-INF/web.xml 
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>inspireupdater</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>DownloadServlet</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>com.acme.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/go</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InfoServlet</display-name>
+    <servlet-name>InfoServlet</servlet-name>
+    <servlet-class>com.acme.InfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InfoServlet</servlet-name>
+    <url-pattern>/info</url-pattern>
+  </servlet-mapping>
+</web-app>
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ ls -latr ~/inspireupdater*
+-rw-rw-r-- 1 ashburndave ashburndave 2212 Apr  6 05:14 /home/ashburndave/inspireupdater30.war
+-rw-rw-r-- 1 ashburndave ashburndave 3498 Apr  6 05:35 /home/ashburndave/inspireupdater25.txt
+-rw-rw-r-- 1 ashburndave ashburndave 2587 Apr  6 05:39 /home/ashburndave/inspireupdater.war
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ jar tvf ~/inspireupdater.war
+    39 Wed Apr 06 05:26:52 EDT 2016 META-INF/MANIFEST.MF
+     0 Wed Apr 06 05:26:50 EDT 2016 META-INF/
+     0 Wed Apr 06 05:26:50 EDT 2016 WEB-INF/
+     0 Wed Apr 06 05:31:24 EDT 2016 WEB-INF/classes/
+     0 Wed Apr 06 05:31:24 EDT 2016 WEB-INF/classes/com/
+     0 Wed Apr 06 05:32:54 EDT 2016 WEB-INF/classes/com/acme/
+   830 Wed Apr 06 05:31:26 EDT 2016 WEB-INF/classes/com/acme/DownloadServlet.class
+   818 Wed Apr 06 05:32:56 EDT 2016 WEB-INF/classes/com/acme/InfoServlet.class
+     0 Wed Apr 06 05:26:50 EDT 2016 WEB-INF/lib/
+  1312 Wed Apr 06 05:32:56 EDT 2016 WEB-INF/web.xml
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE$ cd inspireupdater/
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE/inspireupdater$ ls -latr
+total 32
+drwxrwxr-x 7 ashburndave ashburndave 4096 Apr  6 05:26 ..
+drwxrwxr-x 3 ashburndave ashburndave 4096 Apr  6 05:26 build
+drwxrwxr-x 6 ashburndave ashburndave 4096 Apr  6 05:26 .
+drwxrwxr-x 4 ashburndave ashburndave 4096 Apr  6 05:26 WebContent
+-rw-rw-r-- 1 ashburndave ashburndave  860 Apr  6 05:26 .classpath
+-rw-rw-r-- 1 ashburndave ashburndave 1011 Apr  6 05:26 .project
+drwxrwxr-x 2 ashburndave ashburndave 4096 Apr  6 05:26 .settings
+drwxrwxr-x 3 ashburndave ashburndave 4096 Apr  6 05:31 src
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE/inspireupdater$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE/inspireupdater$ cat .classpath 
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-oracle">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.springsource.sts.ide.tomcat.runtimeTarget/Pivotal tc Server Developer Edition (Runtime) v3.1">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE/inspireupdater$ 
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE/inspireupdater$ cat .project 
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>inspireupdater</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.wst.jsdt.core.javascriptValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.common.project.facet.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.validation.validationbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
+		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
+		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+	</natures>
+</projectDescription>
+ashburndave@dphnuc:~/Documents/workspace-ggts-3.6.4.RELEASE/inspireupdater$ 
+
